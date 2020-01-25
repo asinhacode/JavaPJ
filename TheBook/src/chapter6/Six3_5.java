@@ -7,6 +7,7 @@ public class Six3_5
 {
 	
 	static Scanner input = new Scanner(System.in);
+	static int input1, input2;
 	
 	public static void main(String[] args)
 	{
@@ -18,10 +19,10 @@ public class Six3_5
 		while(choice.equals("Y"))
 		{
 		
-			int x = numberGenerated();
-			int y = numberGenerated();
+			input1 = numberGenerated();
+			input2 = numberGenerated();
 			
-			getResponse(x, y);
+			getResponse(input1, input2);
 		
 			System.out.println("Enter Y to continue and N to exit");
 		    choice = input.next();
@@ -59,8 +60,13 @@ public class Six3_5
 			}
 			
 			else
-				System.out.println("INCORRECT!");
+			{
+				System.out.println("INCORRECT!\nTry again");
+				// estimation(input1, input2);
+				getResponse(input1, input2);
+			}
 
 	}
+	
 
 }
